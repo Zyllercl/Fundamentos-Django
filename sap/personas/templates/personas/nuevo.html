@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Detalle Persona</title>
+    </head>
+    <body>
+        <form method="POST">
+            <h1>Agregar Persona</h1>
+            <table>
+                {{ formaPersona }}
+            </table>
+            <button type="submit">Enviar</button>
+
+            {% comment %} Verificacion de CSRF {% endcomment %}
+            {% csrf_token %}
+        </form>
+    </body>
+</html>
